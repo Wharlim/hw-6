@@ -20,8 +20,6 @@ def similarity(ratings1, ratings2):
 
 
 def main():
-
-
     movies = {}
 
     with open("movies.tsv", "r") as infile:
@@ -31,8 +29,7 @@ def main():
             genres = (fields[2].split("|"))
             movies[int(fields[0])] = Movies(int(fields[0]), fields[1], genres, ratings={})
 
-    # so now i already have a list of movies, now i need store a list from user 0 to 982 for each movie
-
+    # so now i already have a list of movies, now i need store a dictionary of ratings for each movie. 
 
 
     with open("ratings.tsv", "r") as infile:
